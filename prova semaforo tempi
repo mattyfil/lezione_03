@@ -1,0 +1,21 @@
+nord_sud:int=int(input("inserisci valore"))
+est_ovest:int=int(input("scegli valore"))
+soglia=70
+match soglia:
+    case soglia if nord_sud>est_ovest:
+         time_ns=50
+         time_es=50
+         print(f"il tempo assegnato alla direzione nord-sud è",time_ns)
+         print(f"il tempo assegnato alla direzione est-ovest è",time_es)
+    case soglia if nord_sud<est_ovest:
+            time_ns=40
+            time_es=60
+            print(f"il tempo assegnato alla direzione nord-sud è",time_ns)
+            print(f"il tempo assegnato alla direzione est-ovest è",time_es)
+    case _:
+            time_ns=(nord_sud/(nord_sud+est_ovest)*100)
+            time_es=(est_ovest/(nord_sud+est_ovest)*100)
+            print(f"il tempo assegnato alla direzione nord-sud è",time_ns)
+            print(f"il tempo assegnato alla direzione est-ovest è",time_es)
+          
+     

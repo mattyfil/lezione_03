@@ -1,0 +1,10 @@
+def sommaricorsiva(n:int)->None:
+    match n:
+        case n if n<0:
+            return "error"
+        case n if n==1 or n==0:
+            return 1
+        case n if n>1:
+            return (n*sommaricorsiva(n-1))
+            
+print(sommaricorsiva(5))

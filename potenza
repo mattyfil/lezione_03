@@ -1,0 +1,10 @@
+def potenza(espo: float, base: float) -> float:
+    if espo == 0:
+        return 1
+    if espo > 0:
+        return base * potenza(espo - 1, base)
+    if espo < 0:
+        return 1 / potenza(-espo, base)
+        
+
+print(potenza(-2,2))
